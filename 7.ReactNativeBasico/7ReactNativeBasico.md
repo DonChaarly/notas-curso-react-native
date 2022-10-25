@@ -37,6 +37,7 @@ Algunos de estos componentes son los siguientes, debajo de ellos se muestran sus
   - maxLength={10}
 - ***< Button >*** : Boton
 - ***< Image >*** : Imagenes
+  - source:{ require('../img/grafico.jpg')}
 - ***< StyleSheet >*** : Para establecer estilos
 - ***< Alert >*** : Manda un mensaje como un alert
 - ***< Pressable >*** : Para indicar que lo que esta dentro se puede clickear
@@ -65,6 +66,43 @@ el objeto que este iterando se tiene que llama item a fuerza, y si se le manda a
             )
         }}
     />
+
+### TextInput
+Algo curioso del **TextInput** es que a pesar de colocar como keyboardType='number-pad' por ejemplo\
+Aun asi el textInput **estara esperando** que se le pase **un string**, si se le pasa un tipo numeric\
+este mandara error\
+asi que es mejor **transformar el value a toString**
+
+    <TextInput 
+        keyboardType='numeric'
+        value={ presupuesto.toString() }
+        onChangeText={setPresupuesto}
+    />
+
+Tambien el TextInput va a retornar un string como nuevo valor
+
+### Image
+
+Para establecer el **url de una imagen** en el componente Image se coloca la **propiedad source={}**\
+
+    <Image  
+        style={styles.imagen}
+        source={require('../img/icono_ahorro.png')}
+    />
+
+Se puede **crear un objeto** en el que se **importaran las imagenes**, y de esta forma nos ahorramos tener que hacerlo en cada componente Image
+
+    const diccionarioIconos = {
+        ahorro: require('../img/icono_ahorro.png'),
+        comida: require('../img/icono_comida.png'),
+    }
+
+    <Image  
+        style={styles.imagen}
+        source={diccionarioIconos[categoria]}
+    />
+
+
 ## Imprimir variables
 
 Asi como en react se utilizan las llaves para hacer referencia a una variable o una expresion javascript dentro del return
@@ -112,6 +150,8 @@ Algunas diferencias entre Css y StyleSheet:
 - En margin y padding no se puede abrebiar el top, left, etc, se tiene que colocar las propiedades en especifico
   - Ej. (Css)margin: 10 20 10 20;,  (StyleSheet)marginTop: 10, marginLeft: 20, ....
   - Todos los componentes utilizan flex por default con direccion en columna
+  - El transform es diferente, las propiedades que tenga se deben colocar entre [{}]\
+        transform: [{ translateY: 50  }]
 
 
 ## Eventos en ReactNative
