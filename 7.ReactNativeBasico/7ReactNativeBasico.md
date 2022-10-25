@@ -41,7 +41,7 @@ Algunos de estos componentes son los siguientes, debajo de ellos se muestran sus
 - ***< Alert >*** : Manda un mensaje como un alert
 - ***< Pressable >*** : Para indicar que lo que esta dentro se puede clickear
 - ***< ScrollView >*** : Para establecer un scroll ya sea en x o en y
-- ***< FlatList >*** : Es **como un map**, pero tiene **mejor rendimiento** porque renderiza solo los componentes que se ven en la pantalla, en , en , y 
+- ***< FlatList >*** : Es **como un map**, pero tiene **mejor rendimiento** porque renderiza solo los componentes que se ven en la pantalla
   - data: se coloca el arreglo a iterar
   - keyExtractor: es como el key
   - renderItem: se coloca lo que se va a renderizar
