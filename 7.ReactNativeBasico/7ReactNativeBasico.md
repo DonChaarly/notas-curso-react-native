@@ -1,5 +1,7 @@
 # React Native Basico
 
+Primer comentario del proyecto en archivo App.js
+
 ## Crear un nuevo proyecto react
 
     npx react-native init (nombreProyecto)
@@ -72,8 +74,8 @@ En ReactNative se tiene el compnente Modal el cual es muy util para mostrar vent
 Sus principales propiedades son:
 - animationType: se especifica el tipo de animacion. valores: (slide, fade)
 - visible: Para indicar la visibilidad por defecto
-
-        < Modal visible={modalPaciente} animationType='slide' >
+  
+        < Modal visible={modalPaciente} animationType='slide' >\
             Desde el Modal\
         </ Modal >
 

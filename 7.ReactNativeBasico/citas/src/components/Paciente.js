@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View, StyleSheet, Pressable } from 'react-native'
-import { formatearFecha } from '../helpers'
+import { formatearFecha } from '../helpers'
 
 const Paciente = ({
     item, 
@@ -96,4 +96,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default Paciente
+export default Paciente;
