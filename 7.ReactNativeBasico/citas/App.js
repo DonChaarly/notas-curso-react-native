@@ -57,7 +57,7 @@ const App = () => {
       {/* 5. La etiqueta Pressable es como el button pero mejor, soporta mas eventos y puede rodear otras etiquetas para volverlas presionables */}
       <Pressable
         style={styles.btnNuevaCita}
-        // 6. En reactNative los **eventos son muy similares** a como lo trabaja Javascript de forma nativa
+        // 6. En reactNative los **eventos son muy similares** a como lo trabaja Javascript de forma nativa -> Formulario.js
         onPress={() => setModalVisible(!modalVisible)}
       >
         <Text
@@ -67,6 +67,9 @@ const App = () => {
 
       {pacientes.length === 0 ? 
           <Text style={styles.noPacientes}>No hay pacientes aún</Text> :
+          /*9. Es **como un map**, pero tiene **mejor rendimiento** porque renderiza solo los componentes 
+               que se ven en la pantalla, en **data** se coloca el arreglo a iterar, en **keyExtractor** 
+               es como el key, y **renderItem** se coloca lo que se va a renderizar */
           <FlatList
             style={styles.listado}
             data={pacientes}

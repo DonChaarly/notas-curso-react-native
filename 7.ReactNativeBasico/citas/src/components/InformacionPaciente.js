@@ -1,7 +1,6 @@
 import React from 'react'
 import { Text, SafeAreaView, View,  Pressable, StyleSheet } from 'react-native'
-
-import { formatearFecha } from '../helpers'
+import { formatearFecha } from '../helpers'
 
 
 const InformacionPaciente = ({paciente, setPaciente, setModalPaciente}) => {

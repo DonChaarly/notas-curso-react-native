@@ -32,9 +32,18 @@ const Formulario = ({ 
     }, [pacienteObj])
 
 
+    /*7. En ReactNative no se tiene una etiqueta Form como en HTML asi que para validar los campos,
+         esto se tiene que hacer de forma manual
+    */ 
     const handleCita = () => {
         // Validar
         if([paciente, propietario, email, fecha, sintomas].includes('') ) {
+            /*8. En ReactNative se tiene la clase Alert la cual nos sirve para mandar mensajes de alerta el usuario -> App.js
+                 Este metodo toma tres argumentos, el primero sera el titulo de la alerta\
+                 el segundo es la descripcion de la alerta y el tercero es un arreglo de botones que tendra la alerta,
+                 Los botones tambien tiene la propiedad onPress que ejecuta codigo cuando el boton es presionado\
+                 Si no se pasa el argumetno de botones se muestra un boton por defecto
+            */
             Alert.alert(
                 'Error',
                 'Todos los campos son obligatorios'
@@ -150,7 +159,7 @@ const Formulario = ({ 
                         placeholder='Teléfono Propietario'
                         placeholderTextColor={'#666'}
                         keyboardType='number-pad'
-                        value={telefono}
+                        value={telefono} 
                         onChangeText={setTelefono}
                         maxLength={10}
                     />
