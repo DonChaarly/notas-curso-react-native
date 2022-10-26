@@ -40,6 +40,16 @@ Puede haber un error al utilizar el AsyncStorage asi que hay que rodear con un t
       }
     }
 
+## Eliminar elementos del asyncStorage
+
+Para eliminar un valor:
+
+    await AsyncStorage.removeItem('llave')
+
+Para eliminar todos los elementos del asyncStorage
+
+    await AsyncStorage.clear()
+
 ## Cuidados con el AsyncStorage
 
 Solo se pueden almacenar string en el asyncStorage, asi que si se quiere almacenar por ejemplo un objeto, se tiene que pasar por el JSON.stringify()
