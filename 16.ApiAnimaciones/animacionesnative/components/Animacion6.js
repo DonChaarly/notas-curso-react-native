@@ -9,7 +9,9 @@ const Animacion6 = () => {
 
     useEffect(() => {
         //Se determina la animacion a realizar
+        //6. Todo lo que este dentro de Animated.loop() se ejecutara indefinidamente
         Animated.loop(
+            //5. Las animaciones que este dentro de Animated.sequence se ejecutaran una tras otra
             Animated.sequence([
                 Animated.timing(animacion2, {
                     toValue: -30,

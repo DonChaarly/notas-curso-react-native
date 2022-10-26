@@ -15,7 +15,7 @@ const Animacion5 = () => {
 
     const soltarBtn = () => {
         //Se determina la animacion a realizar
-        /*4. Spring se encarga de determinar el tiempo de animacion dejando la animacion mas realista
+        /*4. Spring se encarga de determinar el tiempo de animacion dejando la animacion mas realista - Animacion6.js
              Argumentos:
                 - Estado de animacion
                 - Objeto de propiedades
