@@ -3,10 +3,12 @@ import { StyleSheet, View, Animated } from 'react-native'
 
 const Animacion6 = () => {
 
+    //Se crea el estado inicial de la animacion
     const [ animacion1 ] = useState(new Animated.Value(0));
     const [ animacion2 ] = useState(new Animated.Value(-50));
 
     useEffect(() => {
+        //Se determina la animacion a realizar
         Animated.loop(
             Animated.sequence([
                 Animated.timing(animacion2, {
@@ -42,6 +44,7 @@ const Animacion6 = () => {
 
     return ( 
         <View style={{ alignItems: 'center'}}>
+            {/* Se utiliza la animacion en un componente agregandolo a style y agregando Animated al componente */}
             <Animated.View
                 style={[
                     styles.caja,

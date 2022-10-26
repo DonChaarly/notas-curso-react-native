@@ -3,10 +3,12 @@ import { StyleSheet, View, Animated } from 'react-native';
 
 const Animacion7 = () => {
 
+    //Se crea el estado inicial de la animacion
     const [ animacion1 ] = useState( new Animated.Value(0));
     const [ animacion2 ] = useState( new Animated.Value(1));
 
     useEffect(() => {
+        //Se determina la animacion a realizar
         Animated.sequence([
             Animated.timing( animacion1, {
                 toValue: 300,
@@ -35,6 +37,7 @@ const Animacion7 = () => {
 
     return ( 
         <View>
+            {/* Se utiliza la animacion en un componente agregandolo a style y agregando Animated al componente */}
             <Animated.View
                 style={[
                     styles.caja,
