@@ -1,3 +1,6 @@
+/*2. Para no tener que estar creando los mismos estilos en cada archivo es mejor tener -> Nuevo Presupuesto.js
+     centralizados los estlos en un archivo en concreto 
+ */
 const globalStyles = {
     contenedor: {
         backgroundColor: '#FFF',

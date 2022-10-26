@@ -3,6 +3,9 @@ import { View, Text, StyleSheet, Image, Pressable } from 'react-native'
 import globalStyles from '../styles'
 import { formatearCantidad, formatearFecha } from '../helpers'
 
+/* 6. Se puede crear un objeto en el que se importaran las imagenes, y de esta forma nos ahorramos tener -> App.js
+      que hacerlo en cada componente Image
+*/
 const diccionarioIconos = {
     ahorro: require('../img/icono_ahorro.png'),
     comida: require('../img/icono_comida.png'),
@@ -28,6 +31,7 @@ const Gasto = ({gasto, setModal, setGasto }) => {
             <View style={styles.contenedor}>
                 <View style={styles.contenido}>
                     <View style={styles.contenedorImagen}>
+                        {/* 5. Para establecer el url de una imagen en el componente Image se coloca la propiedad source={} */}
                         <Image  
                             style={styles.imagen}
                             source={diccionarioIconos[categoria]}

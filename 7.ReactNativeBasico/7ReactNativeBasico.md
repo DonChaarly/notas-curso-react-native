@@ -131,6 +131,10 @@ Para **utilizar estilos en una etiqueta** se utiliza la propiedad style y se hac
 
     <Text style={styles.titulo}>
 
+### Lista de estilos StyleSheet
+
+https://reactnative.dev/docs/image-style-props
+
 ### Sombras en ReactNative
 Para colocar sombras es un poco mas complicado,\ 
 se puede utilizar esta web https://ethercreative.github.io/react-native-shadow-generator/
@@ -152,6 +156,8 @@ Algunas diferencias entre Css y StyleSheet:
   - Todos los componentes utilizan flex por default con direccion en columna
   - El transform es diferente, las propiedades que tenga se deben colocar entre [{}]\
         transform: [{ translateY: 50  }]
+  - No se utilizan medidas como px o rem, simplemente se coloca el numero
+        Ej. marginTop: 10
 
 
 ## Eventos en ReactNative

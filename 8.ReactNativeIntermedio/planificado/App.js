@@ -8,6 +8,7 @@ import {
   Image,
   Modal
 } from 'react-native';
+//7. El asyncStorage es muy similar al LocalStorage, sirve para guardar informacion
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import Header from './src/components/Header';
 import NuevoPresupuesto from './src/components/NuevoPresupuesto';
@@ -28,7 +29,9 @@ const App = () => {
 
   useEffect(() => {
     const obtenerPresupuestoStorage = async () => {
+      //10. Puede haber un error al utilizar el AsyncStorage asi que hay que rodear con un tryCatch
         try {
+          //9. Para recuperar un elemento del asyncStorage se utiliza getItem() y se pasa la llave
           const presupuestoStorage = await AsyncStorage.getItem('planificador_presupuesto') ?? 0
 
           if(presupuestoStorage > 0 ) {
@@ -46,6 +49,7 @@ const App = () => {
     if(isValidPresupuesto) {
       const guardarPresupuestoStorage = async () => {
           try {
+            //8. Para guardar un elemento se utiliza el metodo setItem(), se pasa la llave y el valor
             await AsyncStorage.setItem('planificador_presupuesto', presupuesto)
           } catch (error) {
             console.log(error)
@@ -59,7 +63,7 @@ const App = () => {
       const obtenerGastosStorage = async () => {
         try {
             const gastosStorage = await AsyncStorage.getItem('planificador_gastos') 
-
+            //12. Al recuperar un objeto que paso por el stringify se tiene que hacer un parse
             setGastos( gastosStorage ? JSON.parse(gastosStorage) : [] )
         } catch (error) {
             console.log(error)
@@ -71,6 +75,8 @@ const App = () => {
   useEffect(() => {
     const guardarGastosStorage = async () => {
       try {
+        /*11. Solo se pueden almacenar string en el asyncStorage, asi que si se quiere almacenar por ejemplo un objeto, 
+              se tiene que pasar por el JSON.stringify() */
         await AsyncStorage.setItem('planificador_gastos', JSON.stringify(gastos))
       } catch (error) {
         console.log(error)
