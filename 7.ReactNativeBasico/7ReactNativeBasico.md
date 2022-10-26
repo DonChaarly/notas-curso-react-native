@@ -49,6 +49,12 @@ Algunos de estos componentes son los siguientes, debajo de ellos se muestran sus
 - ***< Modal >*** : Para mostrar ventan emergente
   - visible={modalPaciente} 
   - animationType='slide'
+- ***< TouchableHightlight >***: Es como un boton pero indica al usuario cuando se ha apretado, haciendo mas oscuro el boton al momento de apretarlo
+- ***< ActivityInndicator >***: Renderiza un spinner que indica que algo esta cargando
+  - size="large"
+  - color="#fff"
+- ***< TouchableWithoutFeedback >***: Es como un boton pero no le indica al usuario que se ha orpimido con una animacion o algo
+- ***< StatusBar >***: Se utiliza par mostrar la barra de bateria, wifi etc del celular, se colcoa en el componente principal de la app envolviendo los componentes 
 
 ### FlatList
 Es **como un map**, pero tiene **mejor rendimiento** porque renderiza\
@@ -109,7 +115,6 @@ Asi como en react se utilizan las llaves para hacer referencia a una variable o 
 
     <Text style={styles.titulo}>Administrador de Citas {''}
 
-
 ## Estilos en ReactNative - StyleSheet
 
 ***StyleSheet*** en reactNative es **muy similar a CSS** pero cambia un poco principalmente en los guines\
@@ -130,6 +135,10 @@ Para **crear estilos en un compnente** se crea una constante que utilice el como
 Para **utilizar estilos en una etiqueta** se utiliza la propiedad style y se hace referencia a un estilo definido en la constante StyleSheet creada
 
     <Text style={styles.titulo}>
+
+Para agregar estilos directamente en el compnente se colocan doble {}
+
+    <Text style={{ backgroudnColor: '#F3F4F6' }}>Administrador de Citas {''}
 
 ### Lista de estilos StyleSheet
 
