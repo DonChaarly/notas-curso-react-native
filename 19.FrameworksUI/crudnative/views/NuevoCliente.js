@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Platform } from 'react-native';
+/*4. React Native Paper tiene componentes propios ya personalzados\
+     Estos se tiene que importar de react-native-paper
+ */
 import { TextInput, Headline, Button, Paragraph, Dialog, Portal } from 'react-native-paper';
 import globalStyles from '../styles/global';
 import axios from 'axios';
@@ -83,6 +86,7 @@ const NuevoCliente = ({navigation, route}) => {
 
             <Headline style={globalStyles.titulo}>Añadir Nuevo Cliente</Headline>
 
+            {/* 6. el textInput tiene las propiedades label y placeholder que muestran etiquetas en el input muy estilisadas */}
             <TextInput
                 label="Nombre"
                 placeholder="Juan"
@@ -90,6 +94,7 @@ const NuevoCliente = ({navigation, route}) => {
                 value={nombre}
                 style={styles.input}
             />
+            {/* 7. Se puede modifica un poco la apariencia tambien con el style={} */}
             <TextInput
                 label="Teléfono"
                 placeholder="13131414"
@@ -111,20 +116,29 @@ const NuevoCliente = ({navigation, route}) => {
                 value={empresa}
                 style={styles.input}
             />
-
+            {/* 5.  Los componentes de react-native-paper se utilizan como cualquier otro componente\
+                    para modificar un poco sus estilos, estos tiene ciertas props que se les puede mandar\
+                    como el color
+                    Se pueden colocar iconos a los componentes con la propiedad icon*/}
             <Button icon="pencil-circle" mode="contained" onPress={() => guardarCliente() }>
                 Guardar Cliente
             </Button>
 
+            {/* 8. Para agregar modales con react-native-paper se utilizan los siguientes componentes */}
             <Portal>
+                {/* 9. El componente de Dialog tiene la propiedad de visible que maneja el ocultar o mostrar el modal 
+                       Tambien se tiene la propiedad onDismiss que es como un onPress*/}
                 <Dialog
                     visible={alerta}
                     onDismiss={ () => guardarAlerta(false) }
                  >
+                    {/* 10. El componente de Dialog.Title es para el titulo del modal */}
                    <Dialog.Title>Error</Dialog.Title>
+                   {/* 11. El Dialog.Content es el contenido del modal */}
                    <Dialog.Content>
                         <Paragraph>Todos los campos son obligatorios</Paragraph>
                    </Dialog.Content>
+                   {/* 12. En el Dialog.Actions se colocan los botones del modal -> Inicio.js */}
                    <Dialog.Actions>
                        <Button onPress={ () => guardarAlerta(false) }>OK</Button>
                    </Dialog.Actions>

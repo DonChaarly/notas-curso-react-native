@@ -37,6 +37,8 @@ const Inicio = ({navigation}) => {
 
             <Headline style={globalStyles.titulo}> { clientes.length > 0 ? "Clientes" : "Aún no hay Clientes" } </Headline>
 
+            {/* 13. En react-native-paper se tiene el componente List, -> DetallesCliente.js
+                    sin embargo es mejor utilizar el FlatList de react-native, pero el List.Item si tiene mejor aspecto */}
             <FlatList
                 data={clientes}
                 keyExtractor={ cliente => (cliente.id).toString()  }

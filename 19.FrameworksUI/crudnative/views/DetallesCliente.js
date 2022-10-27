@@ -38,6 +38,7 @@ const DetallesCliente = ({navigation, route}) => {
 
     return ( 
         <View style={globalStyles.contenedor}>
+            {/* 14. El componente Headline es como un cabecero */}
             <Headline style={globalStyles.titulo}>{nombre}</Headline>
             <Text style={styles.texto}>Empresa: <Subheading>{empresa}</Subheading> </Text> 
             <Text style={styles.texto}>Correo: <Subheading>{correo}</Subheading> </Text> 
@@ -52,6 +53,7 @@ const DetallesCliente = ({navigation, route}) => {
                 Eliminar Cliente
             </Button>
 
+            {/* 15. El componente FAB es como un Float button  */}
             <FAB
                 icon="pencil"
                 style={globalStyles.fab}
