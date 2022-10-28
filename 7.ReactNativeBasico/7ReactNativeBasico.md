@@ -4,9 +4,44 @@ Primer comentario del proyecto en archivo App.js
 
 ## Crear un nuevo proyecto react
 
+Se tiene dos formas de crear proyectos reactNative\
+Con expo y con react-native de la comunidad\
+Se recomienda trabajar con el de la comunidad
+
+### Para expo
+Hay que instlar expo globalmente, esto solo se la primera vez en la computadora
+
+    sudo npm install -g expo-cli
+
+Para crear un nuevo proyecto
+
+    expo init (Nombre del proyecto)
+
+Selecconamos la opcion blank
+
+### Para el de la comunidad
+
     npx react-native init (nombreProyecto)
 
 ## Correr aplicacion
+### En Expo
+Se debe correr metro primero y dejarlo en una terminal aparte
+
+    npm start
+
+Despues para correr en android:
+
+    npm run android
+
+Para correr en ios:
+
+    npm run ios
+
+Para correr en web
+
+    npm run web
+
+### En el de la comunidad
 Se debe correr metro primero y dejarlo en una terminal aparte
 
     npx react-native start
@@ -17,7 +52,7 @@ Despues para correr en android:
 
 Para correr en ios:
 
-    npx react-native run-ios
+    npx react-native run ios
 
 ## Principales etiquetas de ReactNative
 
