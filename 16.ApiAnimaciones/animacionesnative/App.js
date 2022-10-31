@@ -19,7 +19,7 @@ const App  = () => {
   return (
     <>
       <View style={styles.contenido}>
-          <Animacion2 />
+          <Animacion4 />
       </View>
     </>
   );
